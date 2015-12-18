@@ -1,6 +1,6 @@
 package cracking.the.coding.interview.trials.TreesAndGraphs;
 
-class CheckBalance {
+class CheckBalanced {
 
 	public static Integer getHeightOfBinaryTree(BinaryTreeNode<Integer> root) {
 		if (root == null) {
@@ -28,7 +28,7 @@ class CheckBalance {
 		}
 	}
 
-	private static int checkHeightOfBinaryTree(BinaryTreeNode<Integer> root) {
+	public static int checkHeightOfBinaryTree(BinaryTreeNode<Integer> root) {
 		if (root == null) {
 			return 0;
 		}
@@ -71,12 +71,14 @@ public class Exercise4_4 {
 
 		int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		BinaryTreeNode<Integer> root = MinimalTree.createMinTree(arr, 0, arr.length - 1);
-		
-		arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 15, 16};
+
+		arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16 };
 		BinaryTreeNode<Integer> root2 = MinimalTree.createMinTree(arr, 0, arr.length - 1);
-		
-		System.out.println("Root is " + CheckBalance.isBalanced(root));
-		System.out.println("Root is " + CheckBalance.isBalancedOptimised(root2));
+
+		System.out.println("Height of the tree is " + CheckBalanced.getHeightOfBinaryTree(root));
+		System.out.println("Root is balanced " + CheckBalanced.isBalanced(root));
+		System.out.println("Height of the tree is " + CheckBalanced.getHeightOfBinaryTree(root2));
+		System.out.println("Root is balanced " + CheckBalanced.isBalancedOptimised(root2));
 	}
 
 }
