@@ -58,14 +58,7 @@ class CheckBST {
 	// Time complexity O(N)
 	private static Integer lastPrinted;
 
-	public static boolean isBSTWithOutArray(BinaryTreeNode<Integer> root) {
-		boolean retVal = isBST2(root);
-		// reset lastPrinted for subsequent calls
-		lastPrinted = null;
-		return retVal;
-	}
-
-	private static boolean isBST2(BinaryTreeNode<Integer> root) {
+	public static boolean isBST2(BinaryTreeNode<Integer> root) {
 
 		if (root == null) {
 			return true;
@@ -75,7 +68,7 @@ class CheckBST {
 			return false;
 		}
 
-		if (lastPrinted != null && root.getRoot() <= lastPrinted) {
+		if (lastPrinted != null && root.getRoot() > lastPrinted) {
 			return false;
 		}
 
@@ -85,6 +78,8 @@ class CheckBST {
 			return false;
 		}
 
+		// reset lastPrinted
+		lastPrinted = null;
 		return true;
 	}
 }
@@ -92,23 +87,17 @@ class CheckBST {
 public class Exercise4_5 {
 
 	public static void main(String[] args) {
-
+		
 		int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-		BinaryTreeNode<Integer> root = MinimalTree.createMinTree(arr, 0, arr.length - 1);
-		System.out.println("The tree is a BST: " + CheckBST.isBST(root));
-		System.out.println("The tree is a BST: " + CheckBST.isBSTWithOutArray(root));
-		System.out.println("The tree is a BST: " + CheckBST.isBSTwithoutDuplicates(root) + "\n");
-
+		BinaryTreeNode<Integer> root = MinimalTree.createMinTree(arr, 0, arr.length - 1);		
+		System.out.println("The tree is a BST: " + CheckBST.isBST(root));	
+		
 		arr = new int[] { 100, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		root = MinimalTree.createMinTree(arr, 0, arr.length - 1);		
+		System.out.println("The tree is a BST: " + CheckBST.isBST2(root));
+		
+		arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		root = MinimalTree.createMinTree(arr, 0, arr.length - 1);
-		System.out.println("The tree is a BST: " + CheckBST.isBST(root));
-		System.out.println("The tree is a BST: " + CheckBST.isBSTWithOutArray(root));
-		System.out.println("The tree is a BST: " + CheckBST.isBSTwithoutDuplicates(root) + "\n");
-
-		arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100 };
-		root = MinimalTree.createMinTree(arr, 0, arr.length - 1);
-		System.out.println("The tree is a BST: " + CheckBST.isBST(root));
-		System.out.println("The tree is a BST: " + CheckBST.isBSTWithOutArray(root));
 		System.out.println("The tree is a BST: " + CheckBST.isBSTwithoutDuplicates(root));
 	}
 }
