@@ -51,18 +51,13 @@ class CheckSubTree {
 				StringBuilder arrInOT1 = inOrderTraversal(T1);
 				StringBuilder arrInOT2 = inOrderTraversal(T2);
 				// System.out.println(arrInOT1 + "\n" + arrInOT2);
-				
+
 				if (arrInOT1.toString().contains(arrInOT2.toString())) {
 					return true;
-				} else {
-					return false;
 				}
-			} else {
-				return false;
 			}
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 	public static StringBuilder inOrderTraversal(BinaryTreeNode<Integer> root) {
