@@ -42,17 +42,17 @@ class CheckSubTree {
 
 	// Time complexity O(N + M) and Space complexity O(N + M)
 	public static boolean checkSubTree2(BinaryTreeNode<Integer> T1, BinaryTreeNode<Integer> T2) {
-		StringBuilder arrPreOT1 = preOrderTraversal(T1);
-		StringBuilder arrPreOT2 = preOrderTraversal(T2);
+		StringBuilder arrOT1 = preOrderTraversal(T1);
+		StringBuilder arrOT2 = preOrderTraversal(T2);
 		// System.out.println(arrPreOT1 + "\n" + arrPreOT2);
 
-		if (arrPreOT1 != null && arrPreOT2 != null) {
-			if (arrPreOT1.toString().contains(arrPreOT2.toString())) {
-				StringBuilder arrInOT1 = inOrderTraversal(T1);
-				StringBuilder arrInOT2 = inOrderTraversal(T2);
+		if (arrOT1 != null && arrOT2 != null) {
+			if (arrOT1.toString().contains(arrOT2.toString())) {
+				arrOT1 = inOrderTraversal(T1);
+				arrOT2 = inOrderTraversal(T2);
 				// System.out.println(arrInOT1 + "\n" + arrInOT2);
 
-				if (arrInOT1.toString().contains(arrInOT2.toString())) {
+				if (arrOT1.toString().contains(arrOT2.toString())) {
 					return true;
 				}
 			}
