@@ -6,6 +6,10 @@ class SwapEvenOdd {
 	// 0xa is 1010
 	// 0x5 is 0101
 	public static int swapEvenOdd(int num) {
+		// 1. Arithmetic right shift all the even digits
+		// 2. Left shift all the odd digits
+		// 3. Result of 1 Bitwise-OR Result of 2 is the number that represents
+		// the swapped even odd bits
 		return ((num & 0xaaaaaaaa) >>> 1 | (num & 0x55555555) << 1);
 	}
 }
