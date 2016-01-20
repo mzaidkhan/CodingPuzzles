@@ -1,0 +1,6 @@
+Here is the solution:
+
+1. Fill 5quart jug to the brim and then pour 3 out of 5 quarts into the 3quart jug. Empty the 3quart jug
+2. We are left with 2quarts in 5quart jug. Pout all of it into 3 quart jug
+3. Fill 5 quart jug to the brim again. Next pour enough so that 3 quart jug is full.
+4. We have exactly 4quarts of water in the 5 quart jug
