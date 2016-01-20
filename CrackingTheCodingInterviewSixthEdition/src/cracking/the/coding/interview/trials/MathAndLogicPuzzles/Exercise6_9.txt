@@ -1,0 +1,4 @@
+Only 10 doors will be open at the end. This is because there are 10 perfect squares between 1 and 100.
+Perfect squares have odd number of factors. Which means that at the end, only perfect squares will trigger a door to be kept open.
+
+For example, 49 has factors: 1, 7 and 49. Which means: Door Opened -> Door Closed -> Door Opened.
