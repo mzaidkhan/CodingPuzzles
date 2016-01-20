@@ -1,0 +1,1 @@
+The optimal worst case number of drops would be 14.

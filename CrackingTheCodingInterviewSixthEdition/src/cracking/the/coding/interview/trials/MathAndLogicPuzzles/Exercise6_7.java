@@ -3,13 +3,14 @@ package cracking.the.coding.interview.trials.MathAndLogicPuzzles;
 import java.util.Random;
 
 /**
- * The policy enforced by the queen does not have effect gender equality between
- * boys and girls. Since the probability of having a boy or girl is 0.5. There
- * is a chance that the first child is a girl and the family stops having kids.
- * Or, they have a sequence of boys(1 or more) followed by a girl. Therefore,
- * there are zero or more boys until eventually a girl is born into the family.
- * When we group them such strings together, eventually the gender equality is
- * almost restored. We can simulate this case using a computer program.
+ * The policy enforced by the queen does not have ANY effect on gender
+ * inequality between boys and girls. Since the probability of having a boy or
+ * girl is 0.5. There is a chance that the first child is a girl and the family
+ * stops having kids. Or, they have a sequence of boys(1 or more) followed by a
+ * girl. Therefore, there are zero or more boys until eventually a girl is born
+ * into the family. When we group such strings together of births from various
+ * families, eventually the gender equality is almost restored. We can simulate
+ * this case using a computer program.
  */
 
 class GenderSimulation {
