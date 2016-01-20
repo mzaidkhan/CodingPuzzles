@@ -1,0 +1,13 @@
+The ants will not collide if all of them walk in the same direction, either in clockwise or anti-clockwise direction.
+Therefore, the probability of ants moving in the same direction is:
+	p(All ants moving in same direction) = p(All ants moving in clockwise direction) + p(All ants moving in anti-clockwise direction)
+										 = (1/2)^3 + (1/2)^3
+										 = 1/4
+
+Hence, the probability of collisions between ants  = (1 - p(all ants moving in the same direction))
+												   = 1 - 1/4
+												   = 3/4
+
+Generalizing for n vertex polygon; the probability of collision between ants = 1 - p(all ants moving in the same direction)
+																			 = 1 - ( (1/2)^N + (1/2)^N)
+																			 = 1 - (1/2)^(N-1)
