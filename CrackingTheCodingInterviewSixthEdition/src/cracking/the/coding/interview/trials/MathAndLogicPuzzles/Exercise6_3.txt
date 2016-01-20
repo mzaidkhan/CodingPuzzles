@@ -1,0 +1,6 @@
+An 8 by 8 chess board has 32 white & black squares each. Furthermore, the diagonally opposite sides of a 8 by 8 chess board have the same color.
+Hence removing them would mean we are left with either 32 white and 30 black squares or vis-a-vis. 
+
+Hence it is impossible to fit 31 dominoes into the remaining 62 square of the chess board. Since, each domino would require 1 black and 1 white square
+to fill two squares. Since there are only 32 of one kind and 30 of another. It is not possible to fill exactly one domino on the chess board,
+meaning 2 square of same color are left unfilled with a domino.
