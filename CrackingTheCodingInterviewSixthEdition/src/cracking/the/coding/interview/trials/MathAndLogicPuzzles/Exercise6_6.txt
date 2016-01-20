@@ -1,0 +1,15 @@
+Assuming there are X blue eyed men among N men on this island. 
+It would take X days for the blue eyed men to leave the island and all of them will leave on the same day.
+
+This can be explained as follows: (assuming all the men on the island are intelligent :P)
+
+Case 1: If there was only one blue eyed man on the island. He would look around to check for blue eyed men on the island. 
+When the blue eyed man finds out that there are no other blue eyed men, he assumes he is the one and leave the following night.
+
+Case 2: If there were two blue eyed men on the island. These two men would look around to find the blue eyed men. 
+They would find only one blue eyed man. So each is unsure if they are blue eyed and wait to check if one of them leaves. 
+No one leave that evening. Eventually they leave next evening.
+
+Case 3: Same case here, the three blue eyed men all decide to leave on the 3rd evening.
+
+Generalizing, it takes X days to X blue eyed men to leave the island (they all travel on the same day).
