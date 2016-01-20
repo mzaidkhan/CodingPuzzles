@@ -1,0 +1,15 @@
+Since, we have a constraint of finding the bottle with pills which weight 1.1 grams each in One weighting ONLY.
+
+We can solve this by, 
+
+	Actual weight = 1st bottle * 1 pill + 2nd bottle * 2 pills + 3rd bottle * 3 pills + ... + 20th bottle * 20 pills.
+
+Assuming all the bottles have pills which weight 1 gram each,
+
+	Total weight = 1st bottle * 1 pill + 2nd bottle * 2 pills + 3rd bottle * 3 pills + ... + 20th bottle * 20 pills = 220
+
+Therefore, we can find the bottle which has pills of weight 1.1 gram each with the below formula:
+
+	Bottle with 1.1 gram pills = (Actual weight - 220) grams / 0.1 grams
+
+If bottle 4 has the 1.1 gram pills = (220.4 - 220) / 0.1 = 4
