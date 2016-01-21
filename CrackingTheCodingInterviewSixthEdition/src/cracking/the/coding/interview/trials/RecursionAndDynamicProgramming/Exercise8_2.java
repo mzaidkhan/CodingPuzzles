@@ -116,6 +116,7 @@ public class Exercise8_2 {
 		return false;
 	}
 
+	// Time and space complexity is O(row*col)
 	public boolean findPathMemoization(int row, int col) {
 		if (row < originRow || col < originCol || !maze[row][col]) {
 			return false;
