@@ -2,6 +2,7 @@ package cracking.the.coding.interview.trials.RecursionAndDynamicProgramming;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Stack;
 
 import cracking.the.coding.interview.trials.Helper.Helper;
 
@@ -51,6 +52,8 @@ public class Exercise8_2 {
 	private int col;
 	private boolean[][] maze;
 	private ArrayList<Point> path;
+	private Stack<Point> path2;
+
 	private int originRow, originCol;
 	private HashMap<Point, Boolean> map;
 
@@ -59,6 +62,7 @@ public class Exercise8_2 {
 		col = 10;
 		maze = Helper.randomBooleanMatrix(row, col, 80);
 		path = new ArrayList<Point>();
+		path2 = new Stack<Point>();
 		originRow = 0;
 		originCol = 0;
 		map = new HashMap<Point, Boolean>();
@@ -87,6 +91,7 @@ public class Exercise8_2 {
 
 	public void clearCaches() {
 		this.path.clear();
+		this.path2.clear();
 		this.map.clear();
 	}
 
@@ -154,7 +159,7 @@ public class Exercise8_2 {
 
 		boolean success = false;
 		if (atDestination(row, col) || pathFinderTopDown(row + 1, col) || pathFinderTopDown(row, col + 1)) {
-			path.add(currPos);
+			path2.push(currPos);
 			success = true;
 		}
 		map.put(currPos, success);
@@ -188,9 +193,9 @@ public class Exercise8_2 {
 
 		pathFinder.pathFinderTopDown(pathFinder.originRow, pathFinder.originCol);
 		System.out.println("\nResult of Top Down solution solution: ");
-		if (pathFinder.path.size() > 0) {
-			for (Point point : pathFinder.path) {
-				System.out.println(point);
+		if (pathFinder.path2.size() > 0) {
+			while (!pathFinder.path2.isEmpty()) {
+				System.out.println(pathFinder.path2.pop());
 			}
 			pathFinder.printMaze();
 		} else {
