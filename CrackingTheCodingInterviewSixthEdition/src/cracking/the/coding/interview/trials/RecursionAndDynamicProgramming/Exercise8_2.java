@@ -143,10 +143,7 @@ public class Exercise8_2 {
 	}
 
 	public boolean pathFinderTopDown(int row, int col) {
-		if (row > getDestinationCol() || col > getDestinationRow()) {
-			return false;
-		}
-		if (!maze[row][col]) {
+		if (row > getDestinationCol() || col > getDestinationRow() || !maze[row][col]) {
 			return false;
 		}
 
