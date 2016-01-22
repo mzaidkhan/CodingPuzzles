@@ -5,7 +5,9 @@ public class Exercise8_5 {
 	// Brute force solution.
 	// Time complexity O(B), where B is the value of value
 	public static int recMultiply(int a, int b) {
-		if (b < 0 && a < 0) {
+		if (b == 0) {
+			return 0;
+		} else if (b < 0 && a < 0) {
 			a = -a;
 			b = -b;
 		} else if (b < 0) {
@@ -26,7 +28,7 @@ public class Exercise8_5 {
 	}
 
 	public static void main(String[] args) {
-		int a = 11, b = -12;
+		int a = 12, b = -3;
 		System.out.println("Brute force solution " + a + " x " + b + " = " + recMultiply(a, b));
 	}
 
