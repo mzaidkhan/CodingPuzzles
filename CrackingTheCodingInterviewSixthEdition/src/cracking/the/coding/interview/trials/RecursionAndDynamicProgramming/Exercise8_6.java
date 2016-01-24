@@ -43,9 +43,7 @@ public class Exercise8_6 {
 
 	// Time and space complexity O(2^N) using implicit stack
 	public static void towerOfHanoi(int top, char from, char intermediate, char to) {
-		if (top == 1) {
-			System.out.println("Moving Disk " + top + " from " + from + " to " + to);
-		} else {
+		if (top > 0) {
 			towerOfHanoi(top - 1, from, to, intermediate);
 			System.out.println("Moving Disk " + top + " from " + from + " to " + to);
 			towerOfHanoi(top - 1, intermediate, from, to);
@@ -54,9 +52,7 @@ public class Exercise8_6 {
 
 	// Time and space complexity O(2^N) using explicit stack for towers
 	public static void towerOfHanoi(int top, Tower from, Tower intermediate, Tower to) {
-		if (top == 1) {
-			to.addToTopFrom(from);
-		} else {
+		if (top > 0) {
 			towerOfHanoi(top - 1, from, to, intermediate);
 			to.addToTopFrom(from);
 			towerOfHanoi(top - 1, intermediate, from, to);
@@ -65,7 +61,7 @@ public class Exercise8_6 {
 	}
 
 	public static void main(String[] args) {
-		int disks = 3;
+		int disks = 6;
 		towerOfHanoi(disks, 'A', 'B', 'C');
 
 		int noOfTowers = 3;
