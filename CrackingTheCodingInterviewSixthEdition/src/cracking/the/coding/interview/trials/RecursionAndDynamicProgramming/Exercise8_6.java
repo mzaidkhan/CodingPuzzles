@@ -29,7 +29,7 @@ class Tower {
 	public void addToTopFrom(Tower from) {
 		System.out
 				.println("Moving Disk " + from.peek() + " from Tower " + from.towerIdx + " to Tower " + this.towerIdx);
-		this.stack.push(from.removeTopItem());
+		this.add(from.removeTopItem());
 	}
 
 	@Override
