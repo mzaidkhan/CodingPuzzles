@@ -52,9 +52,7 @@ public class Exercise8_5 {
 	}
 
 	private static int multiplyRec(int a, int b) {
-		if (a == 0) {
-			return 0;
-		} else if (a == 1) {
+		if (a == 1) {
 			return b;
 		}
 		int half = a >> 1;
