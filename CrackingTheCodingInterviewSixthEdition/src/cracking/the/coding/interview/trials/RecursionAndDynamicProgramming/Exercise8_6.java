@@ -41,7 +41,7 @@ class Tower {
 
 public class Exercise8_6 {
 
-	// Time and space complexity O(2^N) using implicit stack
+	// Time and space complexity O(2^N + 1) using implicit stack
 	public static void towerOfHanoi(int top, char from, char intermediate, char to) {
 		if (top > 0) {
 			towerOfHanoi(top - 1, from, to, intermediate);
@@ -50,7 +50,7 @@ public class Exercise8_6 {
 		}
 	}
 
-	// Time and space complexity O(2^N) using explicit stack for towers
+	// Time and space complexity O(2^N + 1) using explicit stack for towers
 	public static void towerOfHanoi(int top, Tower from, Tower intermediate, Tower to) {
 		if (top > 0) {
 			towerOfHanoi(top - 1, from, to, intermediate);
@@ -61,7 +61,7 @@ public class Exercise8_6 {
 	}
 
 	public static void main(String[] args) {
-		int disks = 6;
+		int disks = 3;
 		towerOfHanoi(disks, 'A', 'B', 'C');
 
 		int noOfTowers = 3;
