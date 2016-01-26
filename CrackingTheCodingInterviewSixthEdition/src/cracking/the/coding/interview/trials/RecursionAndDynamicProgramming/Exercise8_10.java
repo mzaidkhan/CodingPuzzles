@@ -60,7 +60,6 @@ public class Exercise8_10 {
 		for (int i = 0; i < screen.length; i++) {
 			for (int j = 0; j < screen[i].length; j++) {
 				System.out.printf("%3s", Color.getColor(screen[i][j]));
-				System.out.flush();
 			}
 			System.out.println();
 		}
