@@ -8,7 +8,7 @@ public class Exercise8_9 {
 
 	public static void genParens(int noOfParens) {
 		if (noOfParens >= 0) {
-			genParens(noOfParens * 2, 0, noOfParens, noOfParens, new char[noOfParens * 2]);
+			genParens(0, noOfParens, noOfParens, new char[noOfParens * 2]);
 
 		}
 	}
@@ -16,32 +16,32 @@ public class Exercise8_9 {
 	// The most optimal solution, there are NO duplicate combinations generated.
 	// The first opening and last closing parens are always in their fixed
 	// positions. We just need to rearrange the valid combinations of other
-	// parens
-	public static void genParens(int remaining, int count, int leftParens, int rightParens, char[] cStr) {
-		if (remaining == 0) {
+	// parens. Time complexity is 0(2^N)
+	public static void genParens(int count, int leftParens, int rightParens, char[] cStr) {
+		if (rightParens == 0) {
 			dCount++;
 			System.out.println(String.copyValueOf(cStr));
 		} else {
 			if (leftParens > 0) {
 				cStr[count] = '(';
-				genParens(remaining - 1, count + 1, leftParens - 1, rightParens, cStr);
+				genParens(count + 1, leftParens - 1, rightParens, cStr);
 			}
 
 			if (rightParens > leftParens) {
 				cStr[count] = ')';
-				genParens(remaining - 1, count + 1, leftParens, rightParens - 1, cStr);
+				genParens(count + 1, leftParens, rightParens - 1, cStr);
 			}
 		}
 	}
 
 	public static void main(String[] args) {
-		int noOfParens = 8;
+		int noOfParens = 4;
 		double start = System.currentTimeMillis();
 		genParens(noOfParens);
 		double end = System.currentTimeMillis();
 
-		System.out.println("(Slow version) Total no of possible combinations " + dCount + " it took "
-				+ (end - start) / 100 + " seconds");
+		System.out.println(
+				"Total no of possible combinations " + dCount + " it took " + (end - start) / 100 + " seconds");
 
 	}
 
