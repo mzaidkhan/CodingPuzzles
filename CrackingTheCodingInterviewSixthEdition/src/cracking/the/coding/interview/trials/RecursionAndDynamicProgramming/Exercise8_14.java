@@ -33,10 +33,10 @@ class BoolEvaluationWithMemoization {
 			char op = expr.charAt(i);
 			String rightExpr = expr.substring(i + 1);
 
-			int leftResTrue = noOfWays(true, leftExpr);
-			int leftResFalse = noOfWays(false, leftExpr);
-			int rightResTrue = noOfWays(true, rightExpr);
-			int rightResFalse = noOfWays(false, rightExpr);
+			int leftResTrue = noOfWays(true, leftExpr, memo);
+			int leftResFalse = noOfWays(false, leftExpr, memo);
+			int rightResTrue = noOfWays(true, rightExpr, memo);
+			int rightResFalse = noOfWays(false, rightExpr, memo);
 
 			int allPossibilities = (leftResTrue + leftResFalse) * (rightResTrue + rightResFalse);
 
