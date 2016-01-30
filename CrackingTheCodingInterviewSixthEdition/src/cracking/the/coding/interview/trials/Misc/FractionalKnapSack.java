@@ -23,7 +23,7 @@ import cracking.the.coding.interview.trials.Helper.Helper;
  * the value of the load.
  * 
  * If the items are already sorted into decreasing order of vi / wi, then the
- * while-loop takes a time in O(n); Therefore, the total time including the sort
+ * for-loop takes a time in O(n); Therefore, the total time including the sort
  * is in O(n log n).
  **/
 
