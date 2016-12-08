@@ -143,8 +143,6 @@ class Room {
 			checkSum[i] = alphabetCount[i].ch;
 		}
 
-		int rotate = code % 26;
-
 		for (int i = 0; i < encrypted.length() - 1; i++) {
 			Character ch = encrypted.charAt(i);
 			if (ch != null && ch != ' ') {
