@@ -10,8 +10,7 @@ public class Advent2016_3_2_adv {
 
 	public static void main(String... args) throws FileNotFoundException {
 
-		Scanner fileScanner = new Scanner(new File(
-				"/Users/mzaidkhan/git/CodingPuzzles/CrackingTheCodingInterviewSixthEdition/src/advent/puzzles/advent2016_3_1.txt"));
+		Scanner fileScanner = new Scanner(new File("./src/advent/puzzles/advent2016_3_1.txt"));
 
 		String[][] lines = new String[3][3];
 

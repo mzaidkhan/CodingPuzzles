@@ -17,8 +17,7 @@ public class Advent2016_3_2 {
 
 		BufferedReader br = null;
 		try {
-			br = new BufferedReader(new FileReader(
-					"/Users/mzaidkhan/git/CodingPuzzles/CrackingTheCodingInterviewSixthEdition/src/advent/puzzles/advent2016_3_1.txt"));
+			br = new BufferedReader(new FileReader("./src/advent/puzzles/advent2016_3_1.txt"));
 
 			String line = br.readLine();
 
