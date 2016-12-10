@@ -37,19 +37,12 @@ public class Advent2016_7_2 {
 			}
 		}
 		fileScanner.close();
-		System.out.print("No of valid IPs " + noOfSSls);
+		System.out.print("No of IPs that support SSL are " + noOfSSls);
 	}
 
 	public static HashSet<String> findXYXSubstring(String str, boolean inv) {
 		HashSet<String> set = new HashSet();
 		for (int i = 0; i < str.length() - 2; i = i + 1) {
-			// if ((str.charAt(i) == str.charAt(i + 1)) && (str.charAt(i + 1) ==
-			// str.charAt(i + 2))) {
-			// System.out.print(" Found interior characters in IP " +
-			// str.substring(i, i + 4) + "\n");
-			// return false;
-			// } else
-			// System.out.println(" Substr " + str.substring(i, i + 3));
 			if ((str.charAt(i) != str.charAt(i + 1)) && (str.charAt(i) == str.charAt(i + 2))) {
 				System.out.print("		Found ABA substring in " + str.substring(i, i + 3) + "\n");
 				StringBuilder sb = new StringBuilder();
